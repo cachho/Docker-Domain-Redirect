@@ -25,4 +25,4 @@ services:
             - "com.centurylinklabs.watchtower.enable=true"
         environment:
             NGINX_ENVSUBST_TEMPLATE_SUFFIX: ".nginx-template"
-            DESTINATION_URL: https://example.com 
+            DESTINATION_URL: https://reparchive.com/feed/top 
