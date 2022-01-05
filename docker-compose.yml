@@ -11,7 +11,7 @@ volumes:
 
 services:
     web:
-        image: nginx:latest
+        image: nginx:1.19-alpine
         container_name: domain-redirect-nginx
         hostname: domain-redirect-nginx
         expose:
@@ -26,4 +26,7 @@ services:
             - "./configs/botblocker-nginx-settings.conf:/etc/nginx/conf.d/botblocker-nginx-settings.conf"
         restart: always
         labels:
-          - "com.centurylinklabs.watchtower.enable=true"
+            - "com.centurylinklabs.watchtower.enable=true"
+        environment:
+            NGINX_ENVSUBST_TEMPLATE_SUFFIX: ".conf"
+            DESTINATION_URL: example.com 
