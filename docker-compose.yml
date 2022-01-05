@@ -2,7 +2,7 @@ version: "3.7"
 
 networks:
     chwd-network:
-        name: chwd-network
+        name: nginx-reverse-proxy-network
         external: true
         driver: bridge
 
@@ -17,7 +17,7 @@ services:
         expose:
             - 80
         networks:
-            - chwd-network
+            - nginx-reverse-proxy-network
         volumes:
             - "./configs:/etc/nginx/templates/"
         restart: always
