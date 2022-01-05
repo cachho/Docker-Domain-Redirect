@@ -28,5 +28,5 @@ services:
         labels:
             - "com.centurylinklabs.watchtower.enable=true"
         environment:
-            NGINX_ENVSUBST_TEMPLATE_SUFFIX: ".conf"
+            NGINX_ENVSUBST_TEMPLATE_SUFFIX: ".nginx-template"
             DESTINATION_URL: example.com 
