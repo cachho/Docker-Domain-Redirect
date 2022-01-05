@@ -12,8 +12,8 @@ volumes:
 services:
     web:
         image: nginx:1.19-alpine
-        container_name: domain-redirect-nginx
-        hostname: domain-redirect-nginx
+        container_name: domain-redirect-nginx-top
+        hostname: domain-redirect-nginx-top
         expose:
             - 80
         networks:
