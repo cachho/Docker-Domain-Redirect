@@ -1,8 +1,7 @@
 version: "3.7"
 
 networks:
-    chwd-network:
-        name: nginx-reverse-proxy-network
+    nginx-reverse-proxy-network:
         external: true
         driver: bridge
 
