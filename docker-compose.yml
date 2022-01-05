@@ -1,9 +1,6 @@
 version: "3.7"
 
 networks:
-    nelson-net:
-        name: nelson-net
-        driver: bridge
     chwd-network:
         name: chwd-network
         external: true
@@ -20,9 +17,8 @@ services:
         # expose:
             # - 94
         ports:
-            - 94:80
+            - 95:80
         networks:
-            - nelson-net
             - chwd-network
         volumes:
             - "./html:/var/www/"
@@ -32,8 +28,6 @@ services:
             - "./configs/globalblacklist.conf:/etc/nginx/conf.d/globalblacklist.conf"
             - "./configs/botblocker-nginx-settings.conf:/etc/nginx/conf.d/botblocker-nginx-settings.conf"
         restart: always
-        depends_on:
-            - database
         labels:
           - "com.centurylinklabs.watchtower.enable=true"
         # command:
