@@ -1,8 +1,8 @@
 version: "3.7"
 
 networks:
-    nginx-reverse-proxy-network:
-        name: nginx-reverse-proxy-network
+    nginx-reverse-proxy-manager-network:
+        name: nginx-reverse-proxy-manager-network
         external: true
         driver: bridge
 
@@ -17,7 +17,7 @@ services:
         expose:
             - 80
         networks:
-            - nginx-reverse-proxy-network
+            - nginx-reverse-proxy-manager-network
         volumes:
             - "./configs:/etc/nginx/templates/"
         restart: always
