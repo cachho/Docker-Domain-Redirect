@@ -12,8 +12,8 @@ volumes:
 services:
     web:
         image: nginx:latest
-        container_name: taobot-nginx
-        hostname: taobot-nginx
+        container_name: domain-redirect-nginx
+        hostname: domain-redirect-nginx
         # expose:
             # - 94
         ports:
