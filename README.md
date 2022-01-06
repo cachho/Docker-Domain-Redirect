@@ -1,5 +1,5 @@
-# Docker_Domain_Redirect
-Redirect domains to a new domain using docker. Made to work together with Nginx Proxy Manager. CloudFlare ready.
+# Docker Domain Redirect
+Redirect domains to a new domain using docker. Made to work together with Nginx Proxy Manager (https://github.com/jc21/nginx-proxy-manager). CloudFlare ready.
 
 # How to use
 1. Change network name (nginx-reverse-proxy-network) to your network to reach Nginx Reverse Proxy
